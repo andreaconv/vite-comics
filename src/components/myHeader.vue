@@ -6,6 +6,7 @@ export default {
   data(){
     return{
       headerMenu, 
+      counter: 0,
     }
   }
 }
@@ -25,7 +26,8 @@ export default {
         <li
           v-for="(item, index) in headerMenu"
           :key="index"
-          :class="{'active' : item.isActive}"><a href="#">
+          :class="{'active' : counter === index}">
+          <a @click="counter = index" href="#">
           {{item.text}}</a>
         </li>
       </ul>
