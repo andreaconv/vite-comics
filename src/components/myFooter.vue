@@ -57,6 +57,12 @@ export default {
           </li>
         </ul>
       </div>
+
+      <!-- TODO: [ADD] image -->
+
+      <div class="image">
+        <img src="../assets/img/dc-logo-bg.png" alt="">
+      </div>
   
     </div>
 
@@ -85,6 +91,7 @@ export default {
   height: 400px;
   background-image: url('../assets/img/footer-bg.jpg');
   background-size: cover;
+  overflow: hidden;
 
   .container{
     display: flex;
@@ -117,6 +124,16 @@ export default {
 
       li:last-child{
         margin-bottom: 1rem;
+      }
+    }
+
+    .image{
+      position: relative;
+
+      img{
+        position: absolute;
+        left: 150px;
+        scale: 1.5;
       }
     }
   }
