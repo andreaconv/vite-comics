@@ -52,16 +52,23 @@ export default {
     ul{
       display: flex;
       justify-content: space-evenly;
-      height: 100%;
       width: 100%;
     }
 
     li{
-      height: 100%;
       @include centerFlex('vertical');
 
+      &:hover a{
+        color: $lightgray-color;
+      }
+
+      // FIXME: all'hover vorrei che l'immagine diventi grigia
+      &:hover img{
+        filter: grayscale(1);
+      }
+
       img{
-        height: 40%;
+        height: 40px;
         margin-right: 1rem;
       }
 
@@ -71,7 +78,7 @@ export default {
       }
 
       &:last-child img{
-          height: 30%;
+          height: 30px;
         }
     }
   }
