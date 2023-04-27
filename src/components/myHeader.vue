@@ -40,14 +40,14 @@ export default {
 
 @use '../scss/partials/generals' as *;
 @use '../scss/partials/vars' as *;
+@use '../scss/partials/mixin' as *;
 
 .myHeader{
   height: 100px;
 }
 
 .container{
-  display: flex;
-  align-items: center;
+  @include centerFlex('vertical');
   justify-content: space-between;
   height: 100%;
 }
