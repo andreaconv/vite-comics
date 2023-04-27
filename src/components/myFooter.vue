@@ -159,6 +159,12 @@ export default {
       border: 2px solid $primary-color;
       color: white;
       padding: 10px 12px;
+
+      &:hover{
+        border: 2px solid white;
+        color: $darkgray-color;
+        background-color: $primary-color;
+      }
     }
 
     .cta{
