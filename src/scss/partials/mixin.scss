@@ -9,5 +9,8 @@
   } @else if $type == 'both'{
     align-items: center;
     justify-content: center;
+  } @else if $type == 'between' {
+    align-items: center;
+    justify-content: space-between;
   }
 }

@@ -126,4 +126,28 @@ const sites = [
   },
 ]
 
-export {dcComics, shop, dc, sites}
+const cta = [
+  {
+    link: '#',
+    path: './src/assets/img/footer-facebook.png',
+  },
+  {
+    link: '#',
+    path: './src/assets/img/footer-twitter.png',
+  },
+  {
+    link: '#',
+    path: './src/assets/img/footer-youtube.png',
+  },
+  {
+    link: '#',
+    path: './src/assets/img/footer-pinterest.png',
+  },
+  {
+    link: '#',
+    path: './src/assets/img/footer-periscope.png',
+  },
+
+]
+
+export {dcComics, shop, dc, sites, cta}

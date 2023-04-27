@@ -1,5 +1,5 @@
 <script>
-import {dcComics, shop, dc, sites} from '../data/Footer-menus.js'
+import {dcComics, shop, dc, sites, cta} from '../data/Footer-menus.js'
 
 export default {
   name: 'myFooter',
@@ -9,6 +9,7 @@ export default {
       shop,
       dc,
       sites,
+      cta,
     }
   }
 }
@@ -24,16 +25,14 @@ export default {
         <ul>
           <li
             v-for="(link, index) in dcComics"
-            :key="index">
-            {{link.text}}
+            :key="index"><a href="#">{{link.text}}</a>
           </li>
         </ul>
 
         <ul>
           <li
             v-for="(link, index) in shop"
-            :key="index">
-            {{link.text}}
+            :key="index"><a href="#">{{link.text}}</a>
           </li>
         </ul>
       </div>
@@ -42,8 +41,7 @@ export default {
         <ul>
           <li
             v-for="(link, index) in dc"
-            :key="index">
-            {{link.text}}
+            :key="index"><a href="#">{{link.text}}</a>
           </li>
         </ul>
       </div>
@@ -52,8 +50,7 @@ export default {
         <ul>
           <li
             v-for="(link, index) in sites"
-            :key="index">
-            {{link.text}}
+            :key="index"><a href="#">{{link.text}}</a>
           </li>
         </ul>
       </div>
@@ -72,7 +69,18 @@ export default {
 
     <div class="container">
 
-      
+      <div class="btn"><a href="#">SING-UP NOW!</a></div>
+
+      <div class="cta">
+
+        <span>FOLLOW US</span>
+
+        <ul>
+          <li v-for="(link, index) in cta"
+            :key="index"><a href="#"><img :src="link.path"></a></li>
+        </ul>
+
+      </div>
 
     </div>
 
@@ -86,6 +94,7 @@ export default {
 
 @use '../scss/partials/generals' as *;
 @use '../scss/partials/vars' as *;
+@use '../scss/partials/mixin' as *;
 
 .myFooterTop{
   height: 400px;
@@ -102,7 +111,7 @@ export default {
       width: 15%;
       padding: 3rem 0;
 
-      li:first-child{
+      li:first-child a{
         color: white;
         text-transform: uppercase;
         font-weight: bold;
@@ -110,7 +119,7 @@ export default {
         margin-bottom: 1rem;
       }
 
-      li{
+      li a{
         color: $lightgray-color;
         margin-bottom: .3rem;
         font-size: .9rem;
@@ -142,6 +151,31 @@ export default {
 .myFooterBottom{
   height: 100px;
   background-color: $darkgray-color;
+
+  .container{
+    @include centerFlex('between');
+    height: 100%;
+    .btn a{
+      border: 2px solid $primary-color;
+      color: white;
+      padding: 10px 12px;
+    }
+
+    .cta{
+      @include centerFlex('vertical');
+
+      span{
+        color: $primary-color;
+        font-weight: bold;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+      }
+      li{
+        display: inline-block;
+        margin: 0 10px;
+      }
+    }
+  }
 }
 
 </style>

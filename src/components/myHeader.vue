@@ -25,8 +25,8 @@ export default {
         <li
           v-for="(item, index) in headerMenu"
           :key="index"
-          :class="{'active' : item.isActive}">
-          {{item.text}}
+          :class="{'active' : item.isActive}"><a href="#">
+          {{item.text}}</a>
         </li>
       </ul>
   
@@ -47,8 +47,7 @@ export default {
 }
 
 .container{
-  @include centerFlex('vertical');
-  justify-content: space-between;
+  @include centerFlex('between');
   height: 100%;
 }
 
@@ -60,12 +59,17 @@ li{
   display: inline-block;
   text-transform: uppercase;
   margin-right: 2rem;
-  color: $gray-color;
-  font-weight: bold;
-  font-size: .8rem;
   position: relative;
   cursor: pointer;
 
+  a{
+    color: $gray-color;
+    font-weight: bold;
+    font-size: .8rem;
+  }
+  a:hover{
+    color: $primary-color;
+  }
   &.active{
     color: $primary-color;
 
