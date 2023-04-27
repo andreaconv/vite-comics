@@ -1,9 +1,14 @@
 <script>
+import {dcComics, shop, dc, sites} from '../data/Footer-menus.js'
+
 export default {
   name: 'myFooter',
   data(){
     return{
-      title: 'myFooter'
+      dcComics,
+      shop,
+      dc,
+      sites,
     }
   }
 }
@@ -17,48 +22,39 @@ export default {
   
       <div class="col">
         <ul>
-          <li>dc comics</li>
-          <li>characters</li>
-          <li>comics</li>
-          <li>movies</li>
-          <li>tv</li>
-          <li>games</li>
-          <li>Videos</li>
-          <li>news</li>
+          <li
+            v-for="(link, index) in dcComics"
+            :key="index">
+            {{link.text}}
+          </li>
         </ul>
 
         <ul>
-          <li>shop</li>
-          <li>shop DC</li>
-          <li>shop DC collectibles</li>
-        </ul>
-      </div>
-
-      <div class="col">
-        <ul>
-          <li>DC</li>
-          <li>Terms of us</li>
-          <li>privacy policy (new)</li>
-          <li>privacy policy (new)</li>
-          <li>privacy policy (new)</li>
-          <li>privacy policy (new)</li>
-          <li>privacy policy (new)</li>
-          <li>privacy policy (new)</li>
-          <li>privacy policy (new)</li>
-          <li>privacy policy (new)</li>
-          <li>privacy policy (new)</li>
-          <li>privacy policy (new)</li>
+          <li
+            v-for="(link, index) in shop"
+            :key="index">
+            {{link.text}}
+          </li>
         </ul>
       </div>
 
       <div class="col">
         <ul>
-          <li>sites</li>
-          <li>dc</li>
-          <li>mad magazine</li>
-          <li>mad magazine</li>
-          <li>mad magazine</li>
-          <li>mad magazine</li>
+          <li
+            v-for="(link, index) in dc"
+            :key="index">
+            {{link.text}}
+          </li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <ul>
+          <li
+            v-for="(link, index) in sites"
+            :key="index">
+            {{link.text}}
+          </li>
         </ul>
       </div>
   
