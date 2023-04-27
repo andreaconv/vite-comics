@@ -19,7 +19,7 @@ export default {
     <div class="container">
   
       <div class="image">
-        <img src="../assets/img/dc-logo.png" alt="logo">
+        <a href="#"><img src="../assets/img/dc-logo.png" alt="logo"></a>
       </div>
 
       <ul>
