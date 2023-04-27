@@ -64,6 +64,7 @@ li{
   font-weight: bold;
   font-size: .8rem;
   position: relative;
+  cursor: pointer;
 
   &.active{
     color: $primary-color;
