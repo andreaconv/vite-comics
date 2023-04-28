@@ -72,7 +72,7 @@ export default {
 
         img{
           width: 100%;
-          aspect-ratio: 1 / 1;
+          aspect-ratio: 2 / 3;
           margin-bottom: 1rem;
         }
 
