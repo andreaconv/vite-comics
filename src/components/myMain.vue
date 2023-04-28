@@ -74,6 +74,10 @@ export default {
           width: 100%;
           aspect-ratio: 2 / 3;
           margin-bottom: 1rem;
+
+          &:hover{
+            scale: 1.1;
+          }
         }
 
         span{
