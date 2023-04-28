@@ -42,7 +42,6 @@ export default {
 
 
 .brands{
-  height: 120px;
   background-color: $primary-color;
 
   .container{
@@ -57,14 +56,16 @@ export default {
 
     li{
       @include centerFlex('vertical');
+      margin: 2.5rem 0;
 
       &:hover a{
-        color: $lightgray-color;
+        text-decoration: underline;
       }
 
       // FIXME: all'hover vorrei che l'immagine diventi grigia
       &:hover img{
         filter: grayscale(1);
+        scale: 1.2;
       }
 
       img{

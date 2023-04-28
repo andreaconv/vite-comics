@@ -55,7 +55,6 @@ export default {
         </ul>
       </div>
 
-      <!-- TODO: [ADD] image -->
 
       <div class="image">
         <img src="../assets/img/dc-logo-bg.png" alt="">
@@ -97,7 +96,6 @@ export default {
 @use '../scss/partials/mixin' as *;
 
 .myFooterTop{
-  height: 400px;
   background-image: url('../assets/img/footer-bg.jpg');
   background-size: cover;
   overflow: hidden;
@@ -149,12 +147,11 @@ export default {
 }
 
 .myFooterBottom{
-  height: 100px;
   background-color: $darkgray-color;
 
   .container{
     @include centerFlex('between');
-    height: 100%;
+    padding: 2rem 0;
     .btn a{
       border: 2px solid $primary-color;
       color: white;
@@ -179,6 +176,10 @@ export default {
       li{
         display: inline-block;
         margin: 0 10px;
+
+        &:hover img{
+          scale: 1.2;
+        }
       }
     }
   }
