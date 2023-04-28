@@ -1,9 +1,11 @@
 <script>
+import Comics from '../data/dc-comics.json';
+
 export default {
   name: 'myMain',
   data(){
     return{
-      title: '-->Content goes here<--'
+      Comics,
     }
   }
 }
@@ -20,48 +22,12 @@ export default {
       <span id="abs">CURRENT SERIES</span>
 
       <div class="main-wrapper">
-        <div class="card">
-          <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="">
-          <span>testo</span>
-        </div>
-        <div class="card">
-          <img src="https://www.panini.it/media/catalog/product/cache/a5b5dd3adfe0d321084804c738f29601/M/1/M1BLLA015ISBN_0.jpg" alt="">
-          <span>American Vampire 1976</span>
-        </div>
-        <div class="card">
-          <img src="https://media.wired.com/photos/593384dad80dd005b42b2817/master/w_2560%2Cc_limit/Aquaman-16.jpg" alt="">
-        </div>
-        <div class="card">
-          <img src="https://d29xot63vimef3.cloudfront.net/image/batgirl/1-1.jpg" alt="">
-        </div>
-        <div class="card">
-          <img src="https://static.posters.cz/image/750/locandine-film-in-plexiglass-batman-prowl-comic-cover-i69653.jpg" alt="">
-        </div>
-        <div class="card">
-          <img src="https://static.wikia.nocookie.net/marvel_dc/images/5/50/Batman_Beyond_v.1_1.jpg" alt="">
-        </div>
-        <div class="card">
-          <img src="https://static.wikia.nocookie.net/marvel_dc/images/0/0d/Batman_Superman_Vol_1_1.jpg" alt="">
-        </div>
-        <div class="card">
-          <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-          <span>Batman: White Knight Presents: Harley Quinn</span>
-        </div>
-        <div class="card">
-          <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-          <span>Batman: White Knight Presents: Harley Quinn</span>
-        </div>
-        <div class="card">
-          <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-          <span>Batman: White Knight Presents: Harley Quinn</span>
-        </div>
-        <div class="card">
-          <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-          <span>Batman: White Knight Presents: Harley Quinn</span>
-        </div>
-        <div class="card">
-          <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-          <span>Batman: White Knight Presents: Harley Quinn</span>
+        <div
+          class="card"
+          v-for="(comic, index) in Comics"
+          :key="index">
+          <img :src="comic.thumb">
+          <span>{{comic.series}}</span>
         </div>
       </div>
       
