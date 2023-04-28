@@ -1,8 +1,12 @@
 <script>
+import Cards from './partials/cards.vue';
 import Comics from '../data/dc-comics.json';
 
 export default {
   name: 'myMain',
+  components: {
+    Cards
+  },
   data(){
     return{
       Comics,
@@ -22,13 +26,9 @@ export default {
       <span id="abs">CURRENT SERIES</span>
 
       <div class="main-wrapper">
-        <div
-          class="card"
-          v-for="(comic, index) in Comics"
-          :key="index">
-          <img :src="comic.thumb">
-          <span>{{comic.series}}</span>
-        </div>
+
+        <Cards :elenco="Comics"/>
+
       </div>
       
       <div class="btn">LOAD MORE</div>
@@ -63,28 +63,7 @@ export default {
 
     .main-wrapper{
       @include centerFlex('wrap-ween');
-      // width: 100%;
       margin-bottom: 1rem;
-
-      .card{
-        width: calc(100% / 6);
-        margin: 1.5rem 0;
-        padding: 0 10px;
-
-        img{
-          width: 100%;
-          aspect-ratio: 2 / 3;
-          margin-bottom: 1rem;
-
-          &:hover{
-            scale: 1.1;
-          }
-        }
-
-        span{
-          text-transform: uppercase;
-        }
-      }
     }
 
     .btn{
@@ -112,6 +91,6 @@ export default {
   }
 
 }
-  
+
 
 </style>
