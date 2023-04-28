@@ -13,12 +13,13 @@ export default {
 
   <div class="myMain">
 
+    <div class="jumbotron"></div>
+
     <div class="container">
 
-      <h2>{{title}}</h2>
+      <div class="cards">carte</div>
 
     </div>
-
 
   </div>
 
@@ -32,11 +33,21 @@ export default {
 
 
 .myMain{
-  height: 90px;
   background-color: $black-color;
-}
-  h2{
+
+  .jumbotron{
+    height: 300px;
+    background-image: url(../assets/img/jumbotron.jpg);
+    background-size: cover;
+  }
+
+  .container{
+    // debug
+    height: 150px;
     color: white;
   }
+
+}
+  
 
 </style>
