@@ -17,6 +17,8 @@ export default {
 
     <div class="container">
 
+      <span>CURRENT SERIES</span>
+
       <div class="cards">carte</div>
 
     </div>
@@ -42,9 +44,21 @@ export default {
   }
 
   .container{
+    position: relative;
     // debug
     height: 150px;
+    // altezza da modificare col contenuto e col padding
     color: white;
+
+    span{
+      padding: 10px 20px;
+      font-weight: bold;
+      background-color: $primary-color;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(0, -50%);
+    }
   }
 
 }
