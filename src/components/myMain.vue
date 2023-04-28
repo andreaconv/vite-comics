@@ -67,8 +67,9 @@ export default {
       margin-bottom: 1rem;
 
       .card{
-        width: calc(100% / 6 - 20px);
+        width: calc(100% / 6);
         margin: 1.5rem 0;
+        padding: 0 10px;
 
         img{
           width: 100%;
@@ -104,7 +105,7 @@ export default {
       font-weight: bold;
       background-color: $primary-color;
       position: absolute;
-      left: -15px;
+      left: 0;
       top: 0;
       transform: translate(0, -50%);
     }
