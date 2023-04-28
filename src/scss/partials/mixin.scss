@@ -12,5 +12,8 @@
   } @else if $type == 'between' {
     align-items: center;
     justify-content: space-between;
+  } @else if $type == 'wrap-ween' {
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
