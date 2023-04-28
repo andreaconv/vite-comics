@@ -55,6 +55,10 @@ export default {
 
 .image{
   height: 70%;
+
+  img{
+    height: 100%;
+  }
 }
 
 li{
